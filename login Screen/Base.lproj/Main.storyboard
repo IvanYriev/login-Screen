@@ -23,23 +23,23 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="ZUG-nC-M5z" userLabel="TexstStackView">
                                         <rect key="frame" x="0.0" y="0.0" width="351.33333333333331" height="134.33333333333334"/>
                                         <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nM7-U0-Ihu" userLabel="passwordTextField">
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kok-S4-iLy" userLabel="userTextField">
                                                 <rect key="frame" x="0.0" y="0.0" width="351.33333333333331" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kok-S4-iLy" userLabel="userTextField">
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nM7-U0-Ihu" userLabel="passwordTextField">
                                                 <rect key="frame" x="0.0" y="50" width="351.33333333333331" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zju-hh-TBq" userLabel="logInButton">
                                                 <rect key="frame" x="0.0" y="100" width="351.33333333333331" height="34.333333333333343"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="Log In"/>
                                                 <connections>
-                                                    <action selector="logInButtonActoin" destination="BYZ-38-t0r" eventType="touchUpInside" id="AmT-h9-fvB"/>
-                                                    <segue destination="diE-9b-tlw" kind="presentation" identifier="showNextVCSegue" destinationCreationSelector="toNextVCSeque:" modalPresentationStyle="fullScreen" id="XyG-J5-Y2k"/>
+                                                    <action selector="loginButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fX6-QC-N4t"/>
+                                                    <segue destination="diE-9b-tlw" kind="presentation" modalPresentationStyle="overFullScreen" id="3Wz-rG-otH"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -60,7 +60,7 @@
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Forgot Password?"/>
                                                 <connections>
-                                                    <action selector="forgotPasswordButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="48T-VY-1KB"/>
+                                                    <action selector="forgotPasswordButtonAction" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ks2-jQ-57h"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -77,7 +77,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="mkU-65-xca"/>
                     <connections>
-                        <outlet property="forgotPasswordButton" destination="b6l-a6-n0m" id="c86-t0-BHp"/>
+                        <outlet property="forgotPasswordButton" destination="b6l-a6-n0m" id="WS9-nV-951"/>
                         <outlet property="forgotUserNameButton" destination="jcY-dV-3yS" id="gQt-8P-elL"/>
                         <outlet property="logInButton" destination="zju-hh-TBq" id="7SB-Yy-2wY"/>
                         <outlet property="passwordTextField" destination="nM7-U0-Ihu" id="99z-sm-i2E"/>
@@ -111,7 +111,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Login Out"/>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="presentation" identifier="ReturnToStartVCSeque" modalPresentationStyle="overFullScreen" id="OVk-n5-URF"/>
+                                    <action selector="logOutButtonAction" destination="diE-9b-tlw" eventType="touchUpInside" id="iBa-8B-CBC"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="privet.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Vow-Aa-xP7" userLabel="handImageView">
@@ -143,10 +143,13 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="rue-bq-FIY"/>
+                    <connections>
+                        <outlet property="helloLabel" destination="uFp-9r-PWc" id="rbG-gJ-7EZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JEg-3J-gSk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1030" y="-174"/>
+            <point key="canvasLocation" x="1044" y="-168"/>
         </scene>
     </scenes>
     <resources>

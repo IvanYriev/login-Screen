@@ -8,11 +8,24 @@
 import UIKit
 
 class NextViewController: UIViewController {
+    
+    var incomingText = ""
+    
+    @IBAction func logOutButtonAction() {
+        dismiss(animated: true)
+    }
+    
+    @IBOutlet weak var helloLabel: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
+        //helloLabel.text = "Hello, " + incomingText
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        //helloLabel.text = "jhgjkhkj"
     }
     
 
