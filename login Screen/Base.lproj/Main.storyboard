@@ -39,7 +39,7 @@
                                                 <buttonConfiguration key="configuration" style="filled" title="Log In"/>
                                                 <connections>
                                                     <action selector="loginButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fX6-QC-N4t"/>
-                                                    <segue destination="diE-9b-tlw" kind="presentation" modalPresentationStyle="overFullScreen" id="3Wz-rG-otH"/>
+                                                    <segue destination="diE-9b-tlw" kind="presentation" modalPresentationStyle="fullScreen" id="Wsa-Yc-uhU"/>
                                                 </connections>
                                             </button>
                                         </subviews>

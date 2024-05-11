@@ -24,7 +24,7 @@ class StartViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let vc = segue.destination as? NextViewController
-        vc?.incomingText = "Привет " + userName + "!"
+        vc?.incomingText = userName
     }
     
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
